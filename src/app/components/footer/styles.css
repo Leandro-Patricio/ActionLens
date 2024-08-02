@@ -1,0 +1,14 @@
+.parallax {
+    
+    background-size: cover;
+
+    @media (min-width: 640px) {
+      background-attachment: fixed;
+      background-position: center;
+    }
+    @media (max-width: 640px) {
+      background-attachment: scroll;
+      background-position: right;
+    }
+
+  }
