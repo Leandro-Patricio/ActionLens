@@ -12,12 +12,11 @@ export async function POST(req: Request, res: any)
     const response: responseProps = await req.json();
 
     const PASSWORD = process.env.PASSWORD;
-    const EMAIL = process.env.EMAIL;
-    const CLIENTID = process.env.OAUTH_CLIENT_ID;
-    const CLIENTPASSWORD = process.env.OAUTH_CLIENT_SECRET;
-    const REFRESHTOKEN = process.env.OAUTH_CLIENT_REFRESH_TOKEN;
+    const EMAIL = process.env.NEXT_PUBLIC_EMAIL;
+    const CLIENTID = process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID;
+    const CLIENTPASSWORD = process.env.NEXT_PUBLIC_OAUTH_CLIENT_SECRET;
+    const REFRESHTOKEN = process.env.NEXT_PUBLIC_OAUTH_CLIENT_REFRESH_TOKEN;
 
-    console.log('CLIENTPASSWORD', CLIENTPASSWORD)
 
     let nodemailer = require("nodemailer");
     const { google } = require("googleapis");
@@ -35,7 +34,7 @@ export async function POST(req: Request, res: any)
             refresh_token: REFRESHTOKEN,
         });
 
-        console.log('oauth2Client', oauth2Client)
+        /* console.log('oauth2Client', oauth2Client) */
         try
         {
             const accessToken: any = await new Promise((resolve, reject) =>

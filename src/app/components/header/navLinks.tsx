@@ -9,7 +9,7 @@ const links = {
     home: { href: './', name: 'Home' },
     videos: { href: './', name: 'Vídeos' },
     sobreNos: { href: './', name: 'Sobre Nós' },
-    contato: { href: './', name: 'Contato' },
+    contato: { href: './contato', name: 'Contato' },
     login: { href: './login', name: 'Login' }
 }
 

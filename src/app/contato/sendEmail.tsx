@@ -30,7 +30,7 @@ export async function sendEmail(currentState: Object, formData: FormData): Promi
     }
     try
     {
-        const url = process.env.API_BASE_URL + "/api/contact"
+        const url = process.env.NEXT_PUBLIC_API_BASE_URL + "/api/contact"
         console.log(url)
         const response: any = await fetch(url, {
             method: "POST",

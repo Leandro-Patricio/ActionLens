@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { BackPhotoGray, InsideGrayPhoto } from './homePageComponents/insideGrayPhoto';
 import { MulherNegraFutebolComCelular } from './homePageComponents/mulherNegraNoCelular';
 import { PassoAPasso } from './homePageComponents/passoAPasso';
-import FormEmail from './contact/emailForm';
+import FormEmail from './contato/emailForm';
 import Footer from './homePageComponents/footer/Footer';
 
 
