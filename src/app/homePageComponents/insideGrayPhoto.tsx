@@ -13,10 +13,10 @@ export async function InsideGrayPhoto()
 
 export async function BackPhotoGray() 
 {
-    return <>
-        <span className={`-translate-y-2 sm:translate-y-0 bg-pingPongMale absolute top-[8rem] sm:top-0 left-0 w-full h-[30rem] sm:h-[40rem] bg-center bg-no-repeat bg-cover -z-10 blur-[1px] grayscale`}></span>
-        <span className={`-translate-y-2 sm:translate-y-0 absolute top-[8rem] sm:top-0 left-0 w-full h-[30rem] sm:h-[40rem] bg-black opacity-70 -z-10`}></span>
-    </>
+    return <span className="">
+        <span className={`-translate-y-2 sm:translate-y-28 bg-pingPongMale absolute top-[8rem] sm:top-0 left-0 w-full h-[30rem] sm:h-[45rem] bg-center bg-no-repeat bg-cover -z-10 blur-[1px] grayscale`}></span>
+        <span className={`-translate-y-2 sm:translate-y-28 absolute top-[8rem] sm:top-0 left-0 w-full h-[30rem] sm:h-[45rem] bg-black opacity-70 -z-10`}></span>
+    </span>
 }
 
 const NavLinksOnGrayPhoto = () =>

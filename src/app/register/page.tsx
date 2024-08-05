@@ -5,6 +5,7 @@ import { registering } from './actions';
 import RedirectToHome from './redirectToHome';
 import Link from 'next/link';
 import SpinnerLoader from '../../../public/SpinnerLoader';
+import Header from '../components/header/header';
 
 type FormError = {
     username?: { _errors: string[] };
@@ -75,59 +76,65 @@ export default function Register()
 
 
     return (
-        <div className="relative flex h-screen w-screen items-center justify-center text-gray-300">
-            <form /* onSubmit={handleSubmit} */ action={formAction} className='flex flex-col w-[80%] h-[60%] p-5 bg-slate-800 rounded-lg justify-between'>
-                <h1 className='text-center font-bold text-xl'>Registre-se</h1>
+        <main className="bg-cover bg-manyBalls bg-center bg-no-repeat bg-opacity-50 h-screen w-screen flex flex-col">
+            <Header />
+            <div className="flex flex-1 items-center justify-center">
+                <form /* onSubmit={handleSubmit} */ action={formAction}
+                    className='flex flex-col gap-5 w-[90%] sm:w-[70%] md:w-[50%] h-fit p-5 sm:p-10 justify-evenly
+                    backdrop-blur-sm bg-black bg-opacity-90 shadow-yellow-big rounded-lg
+                    '>
+                    <h1 className='text-center font-bold text-xl'>Registre-se</h1>
 
-                <label htmlFor="username" className='flex flex-col gap-1'>Usuário
-                    <input type="text" name="username" id="username" placeholder='João da Silva' className='pl-2 text-black'
-                        onChange={(e) => setUsername(e.target.value)}
-                        value={username}
-                    />
-                    {response.username && <span className='text-sm text-red-600'>{response.username._errors[0]}</span>}
-                </label>
+                    <label htmlFor="username" className='flex flex-col gap-1'>Usuário
+                        <input type="text" name="username" id="username" placeholder='João da Silva' className='pl-2 text-black'
+                            onChange={(e) => setUsername(e.target.value)}
+                            value={username}
+                        />
+                        {response.username && <span className='text-sm text-red-600'>{response.username._errors[0]}</span>}
+                    </label>
 
-                <label htmlFor="email" className='flex flex-col gap-1'>E-mail
-                    <input type="email" name="email" id="email" placeholder='jaodasilva@email.com' className='pl-2 text-black'
-                        onChange={(e) => setEmail(e.target.value)}
-                        value={email}
-                    />
-                    {response.email && <span className='text-sm text-red-600'>{response.email._errors[0]}</span>}
-                </label>
+                    <label htmlFor="email" className='flex flex-col gap-1'>E-mail
+                        <input type="email" name="email" id="email" placeholder='jaodasilva@email.com' className='pl-2 text-black'
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                        />
+                        {response.email && <span className='text-sm text-red-600'>{response.email._errors[0]}</span>}
+                    </label>
 
 
-                <label htmlFor="password" className='flex flex-col gap-1'>Senha
-                    <input type="password" name="password" id="password" placeholder='*****************' className='pl-2 text-black'
-                        onChange={(e) => setPassword(e.target.value)}
-                        value={password}
-                    />
-                    {response.password && <span className='text-sm text-red-600'>{response.password._errors[0]}</span>}
-                </label>
+                    <label htmlFor="password" className='flex flex-col gap-1'>Senha
+                        <input type="password" name="password" id="password" placeholder='*****************' className='pl-2 text-black'
+                            onChange={(e) => setPassword(e.target.value)}
+                            value={password}
+                        />
+                        {response.password && <span className='text-sm text-red-600'>{response.password._errors[0]}</span>}
+                    </label>
 
-                <div className='flex justify-center text-ceter'>
-                    <button type='submit'
-                        disabled={isPending}
-                        className={`border-2 text-center w-40 px-6 hover:bg-slate-600 hover:text-white
+                    <div className='flex justify-center text-ceter'>
+                        <button type='submit'
+                            disabled={isPending}
+                            className={`border-2 text-center w-40 px-6 hover:bg-slate-600 hover:text-white
                              disabled:text-gray-500 disabled:border-slate-900 disabled:cursor-not-allowed disabled:hover:bg-slate-700`}
-                    >{!isPending ? 'Registrar' :
-                        <span className='flex gap-2 align-middle items-center'>
-                            <SpinnerLoader />  Processando
-                        </span>
+                        >{!isPending ? 'Registrar' :
+                            <span className='flex gap-2 align-middle items-center'>
+                                <SpinnerLoader />  Processando
+                            </span>
 
-                        }
-                    </button>
-                </div>
-                {/*      {response.errors.newUser === false && <span className='text-sm text-red-600'>{response.errors.mensagem}</span>} */}
-                {/* {JSON.stringify(response)} */}
+                            }
+                        </button>
+                    </div>
+                    {/*      {response.errors.newUser === false && <span className='text-sm text-red-600'>{response.errors.mensagem}</span>} */}
+                    {/* {JSON.stringify(response)} */}
 
 
-                <div className='flex justify-center text-ceter'>
-                    <Link href={'/login'} className='hover:text-white'>Voltar para Login</Link>
-                </div>
+                    <div className='flex justify-center text-ceter'>
+                        <Link href={'/login'} className='hover:text-white'>Voltar para Login</Link>
+                    </div>
 
-            </form>
+                </form>
 
-            {response.newUser && <RedirectToHome username={username} />}
-        </div>
+                {response.newUser && <RedirectToHome username={username} />}
+            </div>
+        </main>
     );
 }

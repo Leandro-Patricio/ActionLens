@@ -7,7 +7,7 @@ export const authConfig = {
     },
     pages: {
         signIn: '/users',
-        signOut: '/login',
+        signOut: './',
     },
     callbacks: {
         async session({ session, token, user })

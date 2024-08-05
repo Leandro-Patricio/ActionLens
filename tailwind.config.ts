@@ -32,14 +32,22 @@ const config: Config = {
       backgroundImage: {
         pingPongMale: "url('/pingPongMale.png')",
         mulherNegraFutebolComCelular: "url('/FimalgemMulherNegraFutebolComCelular.png')",
+        mulherNegraFutebolComCelularSmall: "url('/FimalgemmulherNegraFutebolComCelularSmall.png')",
         voleyball: "url('/voleyball.png')",
         basketball: "url('/basketball.png')",
         tennisball: "url('/tennisball.png')",
-        saqueVolei: "url('/footer/saqueVolei.png')",
+        HomemCortandoVolei: "url('/footer/HomemCortandoVolei.png')",
+        svgBgPattern: "url('/footer/svgBgPattern.svg')",
+        manyBalls: "url('/ManyBalls.jpg')",
       },
       backgroundSize: {
         'size-200': '200%',
         'size-150': '150%',
+      },
+      opacity: {
+        'bg-10': '0.1',
+        'bg-50': '0.5',
+        // Adicione mais opacidades conforme necessário
       },
       screens: {
         xs: '400px',

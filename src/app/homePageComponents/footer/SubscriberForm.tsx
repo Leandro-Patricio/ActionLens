@@ -2,7 +2,7 @@
 
 import { useActionState, useEffect, useState } from "react";
 import { subscribing } from "./action";
-import { ToastSucess } from "../Toasts/Toastify";
+import { ToastSucess } from "../../components/Toasts/Toastify";
 import { ToastContainer } from "react-toastify";
 
 export default function SubscriberForm()

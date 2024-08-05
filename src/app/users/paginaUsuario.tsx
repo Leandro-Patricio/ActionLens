@@ -21,7 +21,7 @@ export default async function PaginaUsuario(/* { children }: UsersProps */)
 
         <section className="bg-gray-900 w-[80vh] h-[70vh] rounded-lg flex flex-col justify-evenly align-middle items-center relative">
             <Image src={randomUser} alt='image of random user' className="w-32 h-32 absolute -top-14 left-1/2  -translate-x-1/2" />
-            <div className="flex flex-col gap-2 m-5">
+            <div className="flex flex-col justify-center text-center gap-2 m-5">
                 <div>Usuário {session?.user?.name}</div>
                 <div className="text-xs font-light">{session?.user?.email}</div>
 

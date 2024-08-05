@@ -6,7 +6,7 @@ import { BackPhotoGray, InsideGrayPhoto } from './homePageComponents/insideGrayP
 import { MulherNegraFutebolComCelular } from './homePageComponents/mulherNegraNoCelular';
 import { PassoAPasso } from './homePageComponents/passoAPasso';
 import FormEmail from './contact/emailForm';
-import Footer from './components/footer/Footer';
+import Footer from './homePageComponents/footer/Footer';
 
 
 export default async function Main()
@@ -20,7 +20,7 @@ export default async function Main()
   /*   const session = await auth();
     console.log(session) */
 
-  return (<>
+  return (
     <main className='relative '>
       {/* <span className='bg-pingPongMale absolute top-0 left-0 w-screen bg-center bg-cover h-[26rem] -z-10'></span> */}
 
@@ -46,7 +46,7 @@ export default async function Main()
       </div >
 
     </main >
-  </>
+
 
 
 

@@ -5,7 +5,7 @@ import whatsapp from "../../../../public/footer/icon_whatsapp.svg";
 import youtube from "../../../../public/footer/icon_youtube.svg";
 import LogoOnlyImage from "../../../../public/Logos/AL Logo OnlyImage.svg";
 import LogoFull from "../../../../public/Logos/AlLogo.svg";
-import { linksNames, NavIndividualLinks } from "../header/navLinks";
+import { linksNames, NavIndividualLinks } from "../../components/header/navLinks";
 import { ReactNode } from "react";
 import './styles.css'
 
@@ -13,11 +13,11 @@ type FooterAsyncProps = {
     children: ReactNode
 }
 
-export default async function FooterAsync({ children }: FooterAsyncProps)
+export default async function FooterAsync({ children }: Readonly<FooterAsyncProps>)
 {
     return <footer className="flex flex-col gap-10 pb-10  bg-gradient-to-b from-[#041225] to-black">
 
-        <section className="bg-saqueVolei parallax bg-right sm:bg-center bg-no-repeat sm:h-[30rem] w-full flex justify-center items-center">
+        <section className="bg-HomemCortandoVolei parallax bg-right sm:bg-center bg-no-repeat sm:h-[30rem] w-full flex justify-center items-center">
 
             <span className="flex sm:grid grid-cols-2 px-5 sm:pl-10">
                 <span className="flex flex-col justify-evenly gap-5 sm:gap-10">
